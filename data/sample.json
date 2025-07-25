@@ -1,0 +1,17 @@
+{
+  "encounterDetails": {
+    "patientInfo": {
+      "firstName": "Jane",
+      "lastName": "Smith"
+    },
+    "providerDetails": {
+      "name": "Community Health Clinic",
+      "physician": "Dr. Davis"
+    },
+    "visit": {
+      "reason": "Follow-up",
+      "diagnosis": "Stable hypertension",
+      "treatmentPlan": "Continue medication"
+    }
+  }
+}

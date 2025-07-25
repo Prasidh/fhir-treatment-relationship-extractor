@@ -1,0 +1,24 @@
+{
+  "relationships": [
+    {
+      "patient_name": "Patient",
+      "provider_name": "Practitioner",
+      "treatment_description": "ExplanationOfBenefit references Patient and Practitioner resources."
+    },
+    {
+      "patient_name": "Patient",
+      "provider_name": "Organization",
+      "treatment_description": "ExplanationOfBenefit references Organization resources."
+    },
+    {
+      "patient_name": "Patient",
+      "provider_name": "Coverage",
+      "treatment_description": "ExplanationOfBenefit references Coverage resources."
+    },
+    {
+      "patient_name": "Patient",
+      "provider_name": "RelatedPerson",
+      "treatment_description": "ExplanationOfBenefit references RelatedPerson resources."
+    }
+  ]
+}

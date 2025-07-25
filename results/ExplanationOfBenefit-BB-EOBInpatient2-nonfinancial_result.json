@@ -1,0 +1,24 @@
+{
+  "relationships": [
+    {
+      "patient_name": "Johnny Example1",
+      "provider_name": "Organization Green Medical Group",
+      "treatment_description": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making."
+    },
+    {
+      "patient_name": "Johnny Example1",
+      "provider_name": "Practitioner Jack Brown",
+      "treatment_description": "Measurement of Cardiac Sampling and Pressure, Left Heart, Percutaneous Approach"
+    },
+    {
+      "patient_name": "Johnny Example1",
+      "provider_name": "Practitioner Jack Brown",
+      "treatment_description": "Fluoroscopy of Multiple Coronary Arteries using Other Contrast"
+    },
+    {
+      "patient_name": "Johnny Example1",
+      "provider_name": "Practitioner Jack Brown",
+      "treatment_description": "Fluoroscopy of Left Heart using Other Contrast"
+    }
+  ]
+}
