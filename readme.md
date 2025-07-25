@@ -1,4 +1,4 @@
-# Provider Access POC: Treatment Relationship Extractor
+# Treatment Relationship Extractor
 
 This project is a Proof-of-Concept (POC) that uses the OpenAI API to automatically extract structured treatment relationship data from unstructured JSON files. It processes a folder of JSON records, identifies patient names, provider names, and treatment descriptions, and then saves this structured data into new result files.
 
