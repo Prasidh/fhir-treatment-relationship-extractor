@@ -1,9 +1,0 @@
-{
-  "relationships": [
-    {
-      "patient_name": "Member 01 Test  Male",
-      "provider_name": "Orange Medical Group",
-      "treatment_description": "Outpatient treatment for concussion with LOC of 30 minutes or less."
-    }
-  ]
-}

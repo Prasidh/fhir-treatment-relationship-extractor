@@ -1,9 +1,0 @@
-{
-  "relationships": [
-    {
-      "patient_name": "Member 01 Test  Male",
-      "provider_name": "XXX Dental Plan",
-      "treatment_description": "Intraoral - periapical first radiographic image"
-    }
-  ]
-}

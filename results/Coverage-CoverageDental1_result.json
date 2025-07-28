@@ -1,9 +1,0 @@
-{
-  "relationships": [
-    {
-      "patient_name": "Member 01 Test  Male, DoB: 1943-01-01",
-      "provider_name": "Organization INSURANCE COMPANY XYZ",
-      "treatment_description": "dental care policy"
-    }
-  ]
-}

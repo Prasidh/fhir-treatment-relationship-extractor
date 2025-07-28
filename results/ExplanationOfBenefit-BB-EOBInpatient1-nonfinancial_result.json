@@ -1,9 +1,0 @@
-{
-  "relationships": [
-    {
-      "patient_name": "Member 01 Test  Male",
-      "provider_name": "XXX Health Plan",
-      "treatment_description": "Inpatient treatment from 2019-01-01 to 2019-10-31"
-    }
-  ]
-}

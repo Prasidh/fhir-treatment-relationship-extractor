@@ -1,9 +1,0 @@
-{
-  "relationships": [
-    {
-      "patient_name": "Johnny Example1",
-      "provider_name": "UPMC Health Plan",
-      "treatment_description": "Coverage under MEDICARE HMO PLAN and GI8-HMO DEDUCTIBLE from 2017-01-01 to 2017-06-30."
-    }
-  ]
-}

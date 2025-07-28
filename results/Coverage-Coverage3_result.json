@@ -1,9 +1,0 @@
-{
-  "relationships": [
-    {
-      "patient_name": "Member 01 Test  Male, DoB: 1943-01-01",
-      "provider_name": "Organization Organization Payer 1",
-      "treatment_description": "health insurance plan policy"
-    }
-  ]
-}

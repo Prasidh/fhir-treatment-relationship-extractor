@@ -1,9 +1,0 @@
-{
-  "relationships": [
-    {
-      "patient_name": "Johnny Example1",
-      "provider_name": "UPMC Health Plan",
-      "treatment_description": "Coverage under MEDICARE HMO PLAN and GR5-HMO DEDUCTIBLE"
-    }
-  ]
-}
