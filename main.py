@@ -11,8 +11,8 @@ load_dotenv()
 
 # --- Pydantic Models ---
 class ExtractedRelationship(BaseModel):
-    patient_name: str = Field(description="The full name of the patient.")
-    provider_name: str = Field(description="The name of the healthcare provider or clinic.")
+    patient_name: str = Field(description="The full name or ID of the patient.")
+    provider_name: str = Field(description="The name or ID of the healthcare provider or clinic.")
     treatment_description: str = Field(description="A brief description of the treatment or diagnosis.")
     source: str
 
@@ -29,44 +29,39 @@ client = OpenAI(api_key=api_key)
 # --- Core Functions ---
 
 def extract_treatment_relationships(data: dict, source_file: str) -> List[dict] | None:
-    """Extracts treatment relationships using the new high-accuracy prompt."""
+    """Extracts treatment relationships using the final, high-accuracy prompt."""
     
-    # ⭐**NEW: High-Accuracy Prompt**
+    # ⭐**FINAL PROMPT: Corrected to handle FHIR references**
     prompt_messages = [
         {
             "role": "system",
             "content": """
-            You are a meticulous Clinical Data Analyst. Your mission is to extract factual treatment relationships 
-            from FHIR JSON data with extreme precision. A 'treatment relationship' is defined as a specific clinical 
-            service, diagnosis, or procedure provided to a specific patient by a specific healthcare provider or organization.
+            You are a highly precise Clinical Data Analyst. Your mission is to extract factual treatment relationships 
+            from FHIR JSON data. A 'treatment relationship' connects a patient to a clinical provider for a specific service.
 
             --- MANDATORY RULES ---
-            1.  **PATIENT MUST BE A PERSON**: The patient's name must be a person (e.g., "John Smith", "Jane Doe").
-                - If no specific person is named as the patient, you MUST output "Unknown".
-                - **NEGATIVE CONSTRAINT**: NEVER use generic terms like "Patient" as a name.
+            1.  **IDENTIFY THE PATIENT**: The patient is identified by a `patient.reference` (like "Patient/Patient2") or a full name.
+                - If the reference is "Patient/Patient2", extract "Patient2".
+                - If a full name is present (e.g., "Johnny Example1"), use that.
+                - If no specific patient can be identified, output "Unknown".
+                - **NEGATIVE CONSTRAINT**: Never use the generic word "Patient" as the name.
 
-            2.  **PROVIDER MUST BE CLINICAL**: The provider must be a clinical entity that directly provides care.
-                - **ALLOWED**: Specific practitioner names (e.g., "Dr. Jack Brown"), medical groups (e.g., "Orange Medical Group"), or clinical facilities (e.g., "General Hospital").
-                - **NEGATIVE CONSTRAINT**: NEVER extract insurance companies, health plans, or payers (e.g., "UPMC Health Plan", "BCBS"). These are financial entities, not providers.
-                - **NEGATIVE CONSTRAINT**: NEVER extract non-clinical persons (e.g., a "RelatedPerson" like a spouse or parent).
+            2.  **IDENTIFY THE PROVIDER**: The provider must be a clinical entity, identified by a `provider.reference` (like "Organization/ProviderOrganization1") or a name.
+                - If the reference is "Organization/ProviderOrganization1", extract "ProviderOrganization1".
+                - **ALLOWED PROVIDERS**: Specific practitioner names, medical groups, or clinical facilities.
+                - **NEGATIVE CONSTRAINT**: Absolutely NO insurance companies, health plans, or financial payers (e.g., "UPMC Health Plan", "BCBS"). These are not providers.
+                - **NEGATIVE CONSTRAINT**: Do NOT extract non-clinical entities like a `RelatedPerson`.
 
-            3.  **TREATMENT MUST BE ACTIONABLE**: The description must be a real medical service, diagnosis, procedure, or prescription.
-                - **ALLOWED**: "Annual Check-up", "Orthostatic hypotension", "Prescribed Amoxicillin", "Measurement of Cardiac Sampling".
-                - **NEGATIVE CONSTRAINT**: NEVER extract administrative details (e.g., "Member Number"), system capabilities, or generic definitions (e.g., "ExplanationOfBenefit references...").
+            3.  **IDENTIFY THE TREATMENT**: The description must be a real medical service, diagnosis, or procedure.
+                - **NEGATIVE CONSTRAINT**: Do NOT extract administrative data (like "Member Number") or generic system definitions.
 
-            --- EXAMPLES ---
-            - GOOD: {"patient_name": "Johnny Example1", "provider_name": "Practitioner Jack Brown", "treatment_description": "Non-ST elevation (NSTEMI) myocardial infarction"}
-            - BAD (Provider is a payer): {"patient_name": "Johnny Example1", "provider_name": "UPMC Health Plan", "treatment_description": "MEDICARE HMO PLAN"}
-            - BAD (Treatment is administrative): {"patient_name": "Member 01 Test", "provider_name": "UPMC Health Plan", "treatment_description": "Member Number"}
-
-            Now, analyze the following FHIR data and extract all valid relationships according to these strict rules.
-            Your response MUST be a JSON object following this exact schema:
+            Your response MUST be a JSON object following this exact schema, with no additional commentary:
             {"relationships": [{"patient_name": "...", "provider_name": "...", "treatment_description": "..."}]}
             """,
         },
         {
             "role": "user",
-            "content": f"FHIR data from file `{source_file}`:\n\n{json.dumps(data, indent=2)}",
+            "content": f"Analyze the following FHIR data from file `{source_file}` and extract all valid relationships according to the strict rules provided:\n\n{json.dumps(data, indent=2)}",
         },
     ]
 
@@ -94,7 +89,7 @@ def extract_treatment_relationships(data: dict, source_file: str) -> List[dict] 
         return None
 
 def process_and_restructure_data(all_relationships: List[dict]) -> List[dict]:
-    """Groups relationships by patient and restructures the data into a list of patients, each with a list of their providers, removing identical relationships."""
+    """Groups relationships by patient and restructures into a list of patients with their providers."""
     patients_map: Dict[str, List[Dict]] = {}
     seen_relationships = set()
 
@@ -129,15 +124,17 @@ def process_and_restructure_data(all_relationships: List[dict]) -> List[dict]:
     return final_list
 
 def process_provider_access_folder(input_folder: str, output_folder: str):
-    """Processes all relevant JSON files, consolidates the results, and saves a single output file."""
+    """Processes all relevant JSON files, consolidates results, and saves a single output file."""
     os.makedirs(output_folder, exist_ok=True)
     all_extracted_relationships = []
     
-    files_to_skip = ("CodeSystem", "StructureDefinition", "ValueSet", "SearchParameter", "ImplementationGuide", "CapabilityStatement")
+    # Add RelatedPerson to the skip list to prevent misidentifying family as providers
+    files_to_skip = ("CodeSystem", "StructureDefinition", "ValueSet", "SearchParameter", "ImplementationGuide", "CapabilityStatement", "RelatedPerson")
+
 
     for filename in os.listdir(input_folder):
         if filename.startswith(files_to_skip):
-            print(f"Skipping documentation file: {filename}")
+            print(f"Skipping documentation/non-clinical file: {filename}")
             continue
 
         if filename.endswith(".json"):

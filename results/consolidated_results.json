@@ -3,31 +3,61 @@
     "patient_name": "Johnny Example1",
     "providers": [
       {
-        "provider_name": "Practitioner Jack Brown",
-        "type": "Non-ST elevation (NSTEMI) myocardial infarction",
+        "provider_name": "Unknown",
+        "type": "Unknown",
+        "source": "Coverage-Coverage1.json"
+      },
+      {
+        "provider_name": "Unknown",
+        "type": "Unknown",
+        "source": "Coverage-Coverage2.json"
+      },
+      {
+        "provider_name": "ProviderOrganization3",
+        "type": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making. When using total time on the date of the encounter for code selection, 25 minutes must be met or exceeded.",
         "source": "ExplanationOfBenefit-BB-EOBInpatient2-nonfinancial.json"
       },
       {
-        "provider_name": "Practitioner Jack Brown",
+        "provider_name": "ProviderOrganization3",
         "type": "Measurement of Cardiac Sampling and Pressure, Left Heart, Percutaneous Approach",
         "source": "ExplanationOfBenefit-BB-EOBInpatient2-nonfinancial.json"
       },
       {
-        "provider_name": "Practitioner Jack Brown",
+        "provider_name": "ProviderOrganization3",
         "type": "Fluoroscopy of Multiple Coronary Arteries using Other Contrast",
         "source": "ExplanationOfBenefit-BB-EOBInpatient2-nonfinancial.json"
       },
       {
-        "provider_name": "Practitioner Jack Brown",
+        "provider_name": "ProviderOrganization3",
         "type": "Fluoroscopy of Left Heart using Other Contrast",
         "source": "ExplanationOfBenefit-BB-EOBInpatient2-nonfinancial.json"
       },
       {
-        "provider_name": "Organization Green Medical Group",
-        "type": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making.",
+        "provider_name": "ProviderOrganization3",
+        "type": "Non-ST elevation (NSTEMI) myocardial infarction",
         "source": "ExplanationOfBenefit-BB-EOBInpatient2-nonfinancial.json"
       },
       {
+        "provider_name": "ProviderOrganization3",
+        "type": "Athscl heart disease of native cor art w oth ang pctrs",
+        "source": "ExplanationOfBenefit-BB-EOBInpatient2-nonfinancial.json"
+      },
+      {
+        "provider_name": "ProviderOrganization3",
+        "type": "Hyperlipidemia, unspecified",
+        "source": "ExplanationOfBenefit-BB-EOBInpatient2-nonfinancial.json"
+      },
+      {
+        "provider_name": "ProviderOrganization3",
+        "type": "Unspecified osteoarthritis, unspecified site",
+        "source": "ExplanationOfBenefit-BB-EOBInpatient2-nonfinancial.json"
+      },
+      {
+        "provider_name": "ProviderOrganization5",
+        "type": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making. When using total time on the date of the encounter for code selection, 25 minutes must be met or exceeded.",
+        "source": "ExplanationOfBenefit-BB-EOBOutpatient2-nonfinancial.json"
+      },
+      {
         "provider_name": "Practitioner John Smith",
         "type": "Orthostatic hypotension",
         "source": "ExplanationOfBenefit-BB-EOBOutpatient2-nonfinancial.json"
@@ -38,18 +68,8 @@
         "source": "ExplanationOfBenefit-BB-EOBOutpatient2-nonfinancial.json"
       },
       {
-        "provider_name": "Practitioner John Smith",
-        "type": "Non-pressure chronic ulcer oth prt left foot w unsp severity",
-        "source": "ExplanationOfBenefit-BB-EOBOutpatient2-nonfinancial.json"
-      },
-      {
         "provider_name": "Practitioner Jane Williams",
         "type": "Non-pressure chronic ulcer oth prt left foot w unsp severity",
-        "source": "ExplanationOfBenefit-BB-EOBOutpatient2-nonfinancial.json"
-      },
-      {
-        "provider_name": "Practitioner John Smith",
-        "type": "Peripheral vascular disease, unspecified",
         "source": "ExplanationOfBenefit-BB-EOBOutpatient2-nonfinancial.json"
       },
       {
@@ -58,161 +78,136 @@
         "source": "ExplanationOfBenefit-BB-EOBOutpatient2-nonfinancial.json"
       },
       {
-        "provider_name": "Organization Black Medical Group",
-        "type": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making.",
-        "source": "ExplanationOfBenefit-BB-EOBOutpatient2-nonfinancial.json"
-      },
-      {
-        "provider_name": "Organization White Medical Group",
-        "type": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making.",
-        "source": "ExplanationOfBenefit-BB-EOBOutpatient2-nonfinancial.json"
-      },
-      {
-        "provider_name": "Practitioner John Smith",
+        "provider_name": "ProviderOrganization1",
         "type": "Angiography, extremity, unilateral, radiological supervision and interpretation",
         "source": "ExplanationOfBenefit-BB-EOBProfessional2-nonfinancial.json"
       },
       {
-        "provider_name": "Practitioner John Smith",
+        "provider_name": "ProviderOrganization1",
         "type": "Revascularization, endovascular, open or percutaneous, tibial, peroneal artery, unilateral, initial vessel; with transluminal angioplasty",
         "source": "ExplanationOfBenefit-BB-EOBProfessional2-nonfinancial.json"
       },
       {
-        "provider_name": "Practitioner Jack Brown",
-        "type": "Angiography, extremity, unilateral, radiological supervision and interpretation",
-        "source": "ExplanationOfBenefit-BB-EOBProfessional2-nonfinancial.json"
-      },
-      {
-        "provider_name": "Practitioner Jack Brown",
-        "type": "Revascularization, endovascular, open or percutaneous, tibial, peroneal artery, unilateral, initial vessel; with transluminal angioplasty",
-        "source": "ExplanationOfBenefit-BB-EOBProfessional2-nonfinancial.json"
-      },
-      {
-        "provider_name": "Organization ABC Ambulance Services",
+        "provider_name": "ProviderTransportationOrganization1",
         "type": "Ambulance service, basic life support, non-emergency transport (BLS)",
         "source": "ExplanationOfBenefit-BB-EOBProfessionalTransportation1-nonfinancial.json"
       },
       {
-        "provider_name": "Organization ABC Ambulance Services",
-        "type": "Athscl native arteries of left leg w ulceration of unsp site",
-        "source": "ExplanationOfBenefit-BB-EOBProfessionalTransportation1-nonfinancial.json"
-      },
-      {
-        "provider_name": "Practitioner Jack Brown",
-        "type": "Non-ST elevation (NSTEMI) myocardial infarction",
+        "provider_name": "ProviderOrganization3",
+        "type": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making. When using total time on the date of the encounter for code selection, 25 minutes must be met or exceeded.",
         "source": "ExplanationOfBenefit-EOBInpatient2.json"
       },
       {
-        "provider_name": "Practitioner Jack Brown",
+        "provider_name": "ProviderOrganization3",
         "type": "Measurement of Cardiac Sampling and Pressure, Left Heart, Percutaneous Approach",
         "source": "ExplanationOfBenefit-EOBInpatient2.json"
       },
       {
-        "provider_name": "Practitioner Jack Brown",
+        "provider_name": "ProviderOrganization3",
         "type": "Fluoroscopy of Multiple Coronary Arteries using Other Contrast",
         "source": "ExplanationOfBenefit-EOBInpatient2.json"
       },
       {
-        "provider_name": "Practitioner Jack Brown",
+        "provider_name": "ProviderOrganization3",
         "type": "Fluoroscopy of Left Heart using Other Contrast",
         "source": "ExplanationOfBenefit-EOBInpatient2.json"
       },
       {
-        "provider_name": "Practitioner John Smith",
+        "provider_name": "Practitioner2",
+        "type": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making. When using total time on the date of the encounter for code selection, 25 minutes must be met or exceeded.",
+        "source": "ExplanationOfBenefit-EOBInpatient2.json"
+      },
+      {
+        "provider_name": "ProviderOrganization5",
+        "type": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making. When using total time on the date of the encounter for code selection, 25 minutes must be met or exceeded.",
+        "source": "ExplanationOfBenefit-EOBOutpatient2.json"
+      },
+      {
+        "provider_name": "Practitioner1",
         "type": "Orthostatic hypotension",
         "source": "ExplanationOfBenefit-EOBOutpatient2.json"
       },
       {
-        "provider_name": "Practitioner Jane Williams",
+        "provider_name": "Practitioner3",
         "type": "Orthostatic hypotension",
         "source": "ExplanationOfBenefit-EOBOutpatient2.json"
       },
       {
-        "provider_name": "Practitioner John Smith",
+        "provider_name": "Practitioner3",
         "type": "Non-pressure chronic ulcer oth prt left foot w unsp severity",
         "source": "ExplanationOfBenefit-EOBOutpatient2.json"
       },
       {
-        "provider_name": "Practitioner John Smith",
+        "provider_name": "Practitioner3",
         "type": "Peripheral vascular disease, unspecified",
         "source": "ExplanationOfBenefit-EOBOutpatient2.json"
       },
       {
-        "provider_name": "Organization Black Medical Group",
-        "type": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making.",
-        "source": "ExplanationOfBenefit-EOBOutpatient2.json"
-      },
-      {
-        "provider_name": "Organization White Medical Group",
-        "type": "Subsequent hospital inpatient or observation care, per day, for the evaluation and management of a patient, which requires a medically appropriate history and/or examination and straightforward or low level of medical decision making.",
-        "source": "ExplanationOfBenefit-EOBOutpatient2.json"
-      },
-      {
-        "provider_name": "Organization Orange Medical Group",
+        "provider_name": "ProviderOrganization1",
         "type": "Angiography, extremity, unilateral, radiological supervision and interpretation",
         "source": "ExplanationOfBenefit-EOBProfessional2.json"
       },
       {
-        "provider_name": "Organization Orange Medical Group",
+        "provider_name": "ProviderOrganization1",
         "type": "Revascularization, endovascular, open or percutaneous, tibial, peroneal artery, unilateral, initial vessel; with transluminal angioplasty",
         "source": "ExplanationOfBenefit-EOBProfessional2.json"
       },
       {
-        "provider_name": "Practitioner John Smith",
-        "type": "Angiography, extremity, unilateral, radiological supervision and interpretation",
-        "source": "ExplanationOfBenefit-EOBProfessional2.json"
-      },
-      {
-        "provider_name": "Practitioner Jack Brown",
-        "type": "Angiography, extremity, unilateral, radiological supervision and interpretation",
-        "source": "ExplanationOfBenefit-EOBProfessional2.json"
-      },
-      {
-        "provider_name": "Practitioner John Smith",
-        "type": "Revascularization, endovascular, open or percutaneous, tibial, peroneal artery, unilateral, initial vessel; with transluminal angioplasty",
-        "source": "ExplanationOfBenefit-EOBProfessional2.json"
-      },
-      {
-        "provider_name": "Practitioner Jack Brown",
-        "type": "Revascularization, endovascular, open or percutaneous, tibial, peroneal artery, unilateral, initial vessel; with transluminal angioplasty",
-        "source": "ExplanationOfBenefit-EOBProfessional2.json"
-      },
-      {
-        "provider_name": "Organization ABC Ambulance Services",
+        "provider_name": "ProviderTransportationOrganization1",
         "type": "Ambulance service, basic life support, non-emergency transport (BLS)",
         "source": "ExplanationOfBenefit-EOBProfessionalTransportation1.json"
       },
       {
-        "provider_name": "Organization ABC Ambulance Services",
-        "type": "Athscl native arteries of left leg w ulceration of unsp site",
-        "source": "ExplanationOfBenefit-EOBProfessionalTransportation1.json"
+        "provider_name": "Unknown",
+        "type": "Unknown",
+        "source": "Patient-Patient1.json"
       }
     ]
   },
   {
-    "patient_name": "Unknown",
+    "patient_name": "Member 01 Test  Male",
     "providers": [
       {
-        "provider_name": "XXX Dental Plan",
+        "provider_name": "Unknown",
+        "type": "Unknown",
+        "source": "Coverage-Coverage3.json"
+      },
+      {
+        "provider_name": "DentalPayer1",
+        "type": "dental care policy",
+        "source": "Coverage-CoverageDental1.json"
+      },
+      {
+        "provider_name": "PractitionerDentalProvider1",
         "type": "Prophylaxis - Adult",
         "source": "ExplanationOfBenefit-BB-EOBOral1-nonfinancial.json"
       },
       {
-        "provider_name": "XXX Dental Plan",
+        "provider_name": "PractitionerDentalProvider1",
         "type": "Periodic oral evaluation",
         "source": "ExplanationOfBenefit-BB-EOBOral1-nonfinancial.json"
       },
       {
-        "provider_name": "Organization Orange Medical Group",
-        "type": "Encounter for dental examination and cleaning with abnormal findings",
-        "source": "ExplanationOfBenefit-BB-EOBOral1-nonfinancial.json"
+        "provider_name": "ProviderOrganization1",
+        "type": "Intraoral - periapical first radiographic image",
+        "source": "ExplanationOfBenefit-BB-EOBOral2-nonfinancial.json"
       },
       {
-        "provider_name": "Orange Medical Group",
+        "provider_name": "ProviderOrganization1",
         "type": "Concussion w LOC of 30 minutes or less, init",
         "source": "ExplanationOfBenefit-BB-EOBOutpatient1-nonfinancial.json"
       },
       {
+        "provider_name": "ProviderOrganization1",
+        "type": "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)",
+        "source": "ExplanationOfBenefit-BB-EOBPharmacy1-nonfinancial.json"
+      },
+      {
+        "provider_name": "ProviderOrganization1",
+        "type": "Concussion w LOC of 30 minutes or less, init",
+        "source": "ExplanationOfBenefit-EOBInpatient1.json"
+      },
+      {
         "provider_name": "XXX Dental Plan",
         "type": "Prophylaxis - Adult",
         "source": "ExplanationOfBenefit-EOBOral1.json"
@@ -223,14 +218,49 @@
         "source": "ExplanationOfBenefit-EOBOral1.json"
       },
       {
-        "provider_name": "Organization Orange Medical Group",
-        "type": "Encounter for dental examination and cleaning with abnormal findings",
-        "source": "ExplanationOfBenefit-EOBOral1.json"
+        "provider_name": "ProviderOrganization1",
+        "type": "Intraoral - periapical first radiographic image",
+        "source": "ExplanationOfBenefit-EOBOral2.json"
       },
       {
-        "provider_name": "Orange Medical Group",
+        "provider_name": "ProviderOrganization1",
         "type": "Concussion w LOC of 30 minutes or less, init",
         "source": "ExplanationOfBenefit-EOBOutpatient1.json"
+      },
+      {
+        "provider_name": "Organization Orange Medical Group",
+        "type": "Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises to develop strength and endurance, range of motion and flexibility",
+        "source": "ExplanationOfBenefit-EOBProfessional1.json"
+      }
+    ]
+  },
+  {
+    "patient_name": "Patient2",
+    "providers": [
+      {
+        "provider_name": "ProviderOrganization1",
+        "type": "Concussion w LOC of 30 minutes or less, init",
+        "source": "ExplanationOfBenefit-BB-EOBInpatient1-nonfinancial.json"
+      },
+      {
+        "provider_name": "ProviderOrganization1",
+        "type": "Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises to develop strength and endurance, range of motion and flexibility",
+        "source": "ExplanationOfBenefit-BB-EOBProfessional1-nonfinancial.json"
+      },
+      {
+        "provider_name": "ProviderOrganization1",
+        "type": "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)",
+        "source": "ExplanationOfBenefit-EOBPharmacy1.json"
+      }
+    ]
+  },
+  {
+    "patient_name": "Member 01 Test",
+    "providers": [
+      {
+        "provider_name": "Unknown",
+        "type": "Unknown",
+        "source": "Patient-Patient2.json"
       }
     ]
   }
